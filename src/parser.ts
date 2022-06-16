@@ -31,7 +31,7 @@ const _tokenizeText = (
     let processingText = originalText;
     parent = p;
     while (processingText.length !== 0) {
-      console.log(processingText);
+      // console.log(processingText);
       const matchArray = matchWithStrongRegxp(processingText);
 
       if (!matchArray) {
