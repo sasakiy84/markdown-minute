@@ -1,9 +1,6 @@
-import {
-  genStrongElement,
-  genTextElement,
-  matchWithListRegxp,
-  matchWithStrongRegxp,
-} from "./lexer";
+import { matchWithListRegxp } from "./lexer/list";
+import { genStrongElement, matchWithStrongRegxp } from "./lexer/strong";
+import { genTextElement } from "./lexer/text";
 import { Token } from "./models/token";
 
 const rootToken: Token = {

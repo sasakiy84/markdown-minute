@@ -1,5 +1,5 @@
-import { MergedToken } from "./src/models/merged_token";
-import { Token } from "./src/models/token";
+import { MergedToken } from "./models/merged_token";
+import { Token } from "./models/token";
 
 const isAllElmParentRoot = (tokens: Array<Token | MergedToken>) => {
   return tokens.map((t) => t.parent.elmType).every((val) => val === "root");

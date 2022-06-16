@@ -1,4 +1,4 @@
-import { generate } from "../generator";
+import { generate } from "./generator";
 import { analyze } from "./lexer";
 import { parse } from "./parser";
 
