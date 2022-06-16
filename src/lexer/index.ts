@@ -16,16 +16,17 @@ export const analyze = (markdown: string) => {
       state = LIST_STATE;
       lists += `${md}\n`;
     } else if (state === LIST_STATE && listMatch) {
-      if (index === rawMdArray.length - 1) {
-        lists += md;
-        mdArray.push(lists);
-      } else {
-        lists += `${md}\n`;
-      }
+      lists += `${md}\n`;
     } else if (state === LIST_STATE && !listMatch) {
       state = NEUTRAL_STATE;
       mdArray.push(lists);
       lists = "";
+    }
+    if (
+      lists.length > 0 &&
+      (state === NEUTRAL_STATE || index === rawMdArray.length - 1)
+    ) {
+      mdArray.push(lists);
     }
 
     if (lists.length === 0) mdArray.push(md);
