@@ -1,5 +1,5 @@
 import { generate } from "../generator";
-import { analyze } from "./laxer";
+import { analyze } from "./lexer";
 import { parse } from "./parser";
 
 const convertToHTMLString = (markdown: string) => {

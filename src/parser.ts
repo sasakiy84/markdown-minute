@@ -3,7 +3,7 @@ import {
   genTextElement,
   matchWithListRegxp,
   matchWithStrongRegxp,
-} from "./laxer";
+} from "./lexer";
 import { Token } from "./models/token";
 
 const rootToken: Token = {
